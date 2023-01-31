@@ -21,8 +21,8 @@ FS.readFile(URL, function (err, data) {
 
 	// 50/50
 	let hintFiftyFifty = (element) => {
-		console.log('1.hintFiftyFifty');
 		console.log('');
+		console.log('You used the "50/50" hint. Choose an answer option:');
 		switch (element.answer) {
 			case 'A':
 				console.log(element.answer + '. ' + element.A);
@@ -50,7 +50,8 @@ FS.readFile(URL, function (err, data) {
 
 	// Пропустить вопрос
 	let hintSkipTheQuestion = () => {
-		console.log('You used the "Skip question" hitn. Next question.');
+		console.log('');
+		console.log('You used the "Skip question" hint. Next question.');
 		console.log('');
 		bank = bank + 1000;
 		outputRandomQuestions();
